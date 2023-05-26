@@ -8,7 +8,6 @@ import (
 )
 
 func getCallerInfo() (info string) {
-
 	// pc, file, lineNo, ok := runtime.Caller(2)
 	_, file, lineNo, ok := runtime.Caller(2)
 	if !ok {
@@ -20,10 +19,10 @@ func getCallerInfo() (info string) {
 	return fmt.Sprintf("%s:%d: ", fileName, lineNo)
 }
 
-func voteDel(messageID int, userID int64) {
+func voteDel(messageID int, userID int64) error {
 	m := getMessage(messageID)
 	u := getUser(userID)
-	m.voteDel(u.ID)
+	return m.voteDel(u.ID)
 }
 
 func checkDelete(messageID int, userID int64) {
