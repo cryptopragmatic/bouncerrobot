@@ -14,7 +14,7 @@ Group members can then vote by sending /del command as a reply to particular mes
 - [ ] custom settings for groups
 - [ ] unban command
 
-#### DONE
+#### DONE - v1.0
 
 - [x] init project
 - [x] init bot
