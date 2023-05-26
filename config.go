@@ -11,6 +11,8 @@ type Config struct {
 	TelegramAPIKey string `json:"telegram_api_key"`
 	Dev            bool   `json:"dev"`
 	LogAccount     int64  `json:"log_account"`
+	Votes          int    `json:"votes"`
+	Dels           int64  `json:"dels"`
 }
 
 // Load method loads configuration file to Config struct

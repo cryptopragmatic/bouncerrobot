@@ -2,8 +2,6 @@ package main
 
 import (
 	"log"
-	"net/url"
-	"strings"
 	"time"
 
 	"gopkg.in/telebot.v3"
@@ -25,7 +23,7 @@ func initTelegramBot() *telebot.Bot {
 }
 
 func logTelegram(message string) {
-	message = "anote-robot:" + getCallerInfo() + message
+	message = "VoteDelBot:" + getCallerInfo() + message
 	rec := &telebot.Chat{
 		ID: int64(conf.LogAccount),
 	}
@@ -37,21 +35,4 @@ func notificationTelegram(message string) {
 		ID: int64(conf.LogAccount),
 	}
 	bot.Send(rec, message)
-}
-
-func logTelegramService(message string) error {
-	m, _ := url.QueryUnescape(message)
-	message, _ = url.PathUnescape(m)
-	var err error
-
-	rec := &telebot.Chat{
-		ID: int64(conf.LogAccount),
-	}
-
-	if strings.Contains(message, "no data for this key") {
-		_, err = bot.Send(rec, message, telebot.NoPreview, telebot.Silent)
-	} else {
-		_, err = bot.Send(rec, message)
-	}
-	return err
 }
