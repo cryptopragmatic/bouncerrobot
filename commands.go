@@ -6,6 +6,7 @@ import (
 
 func initCommands() {
 	bot.Handle("/del", delCommand)
+	bot.Handle("/start", startCommand)
 }
 
 func delCommand(c telebot.Context) error {
@@ -26,5 +27,9 @@ func delCommand(c telebot.Context) error {
 		bot.Send(c.Chat(), mMustReply)
 	}
 
+	return nil
+}
+
+func startCommand(c telebot.Context) error {
 	return nil
 }

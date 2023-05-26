@@ -3,6 +3,7 @@
 
 #### TODO - v1.0
 
+- [ ] handle when not admin
 - [ ] ban execute
 - [ ] deploy
 - [ ] deploy script
