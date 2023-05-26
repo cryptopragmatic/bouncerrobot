@@ -1,6 +1,6 @@
 # BouncerRobot
 
-## Democratic Telegram Bot For Deleting And Banning
+## Democratic Telegram Bot For Deleting Spam And Banning Spammers
 
 To start using BouncerRobot, simply add it to your Telegram group and make it an admin.
 
