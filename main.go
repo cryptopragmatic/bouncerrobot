@@ -22,6 +22,8 @@ func main() {
 
 	db = initDb()
 
+	initCommands()
+
 	log.Println("VoteDelBot started. 🚀")
 
 	bot.Start()

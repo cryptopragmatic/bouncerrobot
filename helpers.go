@@ -18,3 +18,15 @@ func getCallerInfo() (info string) {
 	fileName := path.Base(file) // The Base function returns the last element of the path
 	return fmt.Sprintf("%s:%d: ", fileName, lineNo)
 }
+
+func voteDel(messageID int) {
+
+}
+
+func checkDelete(messageID int, userID int64) {
+
+}
+
+func checkBan(userID int64) {
+
+}
