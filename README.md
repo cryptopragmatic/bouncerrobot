@@ -6,9 +6,10 @@
 - [ ] delete execute
 - [ ] ban execute
 
-#### TODO - v2.0
+#### TODO - v1.1
 
 - [ ] expand for multiple groups
+- [ ] unban command
 
 #### DONE
 
