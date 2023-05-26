@@ -7,6 +7,7 @@
 - [ ] delete vote
 - [ ] delete execute
 - [ ] ban execute
+- [ ] expand for multiple groups
 
 #### DONE
 
