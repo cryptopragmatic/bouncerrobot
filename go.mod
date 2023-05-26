@@ -1,4 +1,4 @@
-module votedelbot
+module bouncerrobot
 
 go 1.19
 

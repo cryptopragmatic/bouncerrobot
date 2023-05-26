@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"path"
 	"runtime"
 )
@@ -20,11 +21,14 @@ func getCallerInfo() (info string) {
 }
 
 func voteDel(messageID int) {
-
+	m := getMessage(messageID)
+	log.Println(m)
+	m.voteDel()
 }
 
 func checkDelete(messageID int, userID int64) {
-
+	log.Println(messageID)
+	log.Println(userID)
 }
 
 func checkBan(userID int64) {

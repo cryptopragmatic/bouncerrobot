@@ -15,6 +15,8 @@ func delCommand(c telebot.Context) error {
 		checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID)
 
 		checkBan(c.Message().ReplyTo.Sender.ID)
+	} else {
+		bot.Send(c.Chat(), mMustReply)
 	}
 
 	return nil
