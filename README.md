@@ -2,6 +2,12 @@
 
 #### TODO
 
+- [ ] del command basics
+- [ ] models
+- [ ] delete vote
+- [ ] delete execute
+- [ ] ban execute
+
 #### DONE
 
 - [x] Init project
