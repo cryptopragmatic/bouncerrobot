@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"path"
 	"runtime"
+
+	"gopkg.in/telebot.v3"
 )
 
 func getCallerInfo() (info string) {
@@ -19,15 +20,20 @@ func getCallerInfo() (info string) {
 	return fmt.Sprintf("%s:%d: ", fileName, lineNo)
 }
 
-func voteDel(messageID int, userID int64) error {
+func voteDel(messageID int, ownerID int64, voterID int64) error {
 	m := getMessage(messageID)
-	u := getUser(userID)
-	return m.voteDel(u.ID)
+	getUser(ownerID)
+	return m.voteDel(voterID)
 }
 
-func checkDelete(messageID int, userID int64) {
+func checkDelete(messageID int, msg *telebot.Message) bool {
 	m := getMessage(messageID)
-	log.Println(m)
+	count := db.Model(m).Association("Votes").Count()
+	if count == conf.Votes {
+		bot.Delete(msg)
+		return true
+	}
+	return false
 }
 
 func checkBan(userID int64) {

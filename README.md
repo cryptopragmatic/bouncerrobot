@@ -2,8 +2,6 @@
 
 #### TODO - v1.0
 
-- [ ] delete vote
-- [ ] delete execute
 - [ ] ban execute
 
 #### TODO - v1.1
@@ -18,3 +16,5 @@
 - [x] init database
 - [x] models
 - [x] del command basics
+- [x] delete vote
+- [x] delete execute

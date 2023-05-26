@@ -12,7 +12,7 @@ type Message struct {
 	Votes      []Vote
 }
 
-func (m *Message) voteDel(userID uint) error {
+func (m *Message) voteDel(userID int64) error {
 	v := &Vote{}
 	db.First(v, &Vote{MessageID: m.ID, UserID: userID})
 	if v.ID == 0 {
@@ -34,7 +34,7 @@ func getMessage(mID int) *Message {
 type Vote struct {
 	gorm.Model
 	MessageID uint
-	UserID    uint
+	UserID    int64
 }
 
 type User struct {

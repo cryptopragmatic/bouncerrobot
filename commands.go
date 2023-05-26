@@ -10,13 +10,16 @@ func initCommands() {
 
 func delCommand(c telebot.Context) error {
 	if c.Message().IsReply() {
-		err := voteDel(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID)
+		err := voteDel(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID, c.Sender().ID)
 		if err != nil {
 			bot.Send(c.Chat(), mAlreadyVotes)
 			return err
 		}
 
-		checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID)
+		del := checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo)
+		if del {
+			bot.Send(c.Chat(), mDeleted)
+		}
 
 		checkBan(c.Message().ReplyTo.Sender.ID)
 	} else {
