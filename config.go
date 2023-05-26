@@ -12,7 +12,7 @@ type Config struct {
 	Dev            bool   `json:"dev"`
 	LogAccount     int64  `json:"log_account"`
 	Votes          int64  `json:"votes"`
-	Dels           int64  `json:"dels"`
+	Dels           int    `json:"dels"`
 }
 
 // Load method loads configuration file to Config struct

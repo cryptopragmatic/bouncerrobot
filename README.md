@@ -3,7 +3,6 @@
 
 #### TODO - v1.0
 
-- [ ] ban execute
 - [ ] deploy
 - [ ] deploy script
 - [ ] dev env
@@ -24,3 +23,4 @@
 - [x] delete vote
 - [x] delete execute
 - [x] handle when not admin
+- [x] ban execute

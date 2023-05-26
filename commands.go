@@ -17,14 +17,17 @@ func delCommand(c telebot.Context) error {
 			return err
 		}
 
-		del, err := checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo)
+		del, err := checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID, c.Message().ReplyTo)
 		if err != nil {
 			bot.Send(c.Chat(), mNotAdmin)
 		} else if del {
 			bot.Send(c.Chat(), mDeleted)
 		}
 
-		checkBan(c.Message().ReplyTo.Sender.ID)
+		ban := checkBan(c.Chat(), c.Message().ReplyTo.Sender.ID, c.Message().ReplyTo.Sender)
+		if ban {
+			bot.Send(c.Chat(), mBanned)
+		}
 	} else {
 		bot.Send(c.Chat(), mMustReply)
 	}

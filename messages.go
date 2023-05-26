@@ -8,4 +8,6 @@ const (
 	mDeleted = "Spam message has been deleted. 👍"
 
 	mNotAdmin = "BouncerRobot needs to be admin."
+
+	mBanned = "User has been banned. 👍"
 )
