@@ -3,7 +3,6 @@
 
 #### TODO - v1.0
 
-- [ ] welcome message
 - [ ] deploy
 
 #### TODO - v1.1
@@ -25,3 +24,4 @@
 - [x] delete execute
 - [x] handle when not admin
 - [x] ban execute
+- [x] welcome message

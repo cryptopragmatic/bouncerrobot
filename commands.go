@@ -36,5 +36,7 @@ func delCommand(c telebot.Context) error {
 }
 
 func startCommand(c telebot.Context) error {
+	bot.Send(c.Chat(), mWelcome)
+
 	return nil
 }
