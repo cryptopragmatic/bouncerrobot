@@ -4,6 +4,9 @@
 #### TODO - v1.0
 
 - [ ] ban execute
+- [ ] deploy
+- [ ] deploy script
+- [ ] dev env
 
 #### TODO - v1.1
 
