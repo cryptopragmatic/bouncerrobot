@@ -2,6 +2,7 @@
 
 #### TODO - v1.0
 
+- [ ] init database
 - [ ] del command basics
 - [ ] models
 - [ ] delete vote
