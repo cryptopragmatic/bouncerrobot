@@ -24,7 +24,7 @@ func main() {
 
 	initCommands()
 
-	log.Println("VoteDelBot started. 🚀")
+	log.Println("BouncerRobot started. 🚀")
 
 	bot.Start()
 }

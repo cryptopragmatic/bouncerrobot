@@ -23,7 +23,7 @@ func initTelegramBot() *telebot.Bot {
 }
 
 func logTelegram(message string) {
-	message = "VoteDelBot:" + getCallerInfo() + message
+	message = "BouncerRobot:" + getCallerInfo() + message
 	rec := &telebot.Chat{
 		ID: int64(conf.LogAccount),
 	}
