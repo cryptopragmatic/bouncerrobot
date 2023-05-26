@@ -2,6 +2,10 @@
 
 ## Democratic Telegram Bot For Deleting And Banning
 
+To start using BouncerRobot, simply add it to your Telegram group and make it an admin.
+
+Group members can then vote by sending /del command as a reply to particular messages and when enough votes is collected (5 by default), the message will be deleted and sender banned.
+
 #### TODO - v1.1
 
 - [ ] deploy script
