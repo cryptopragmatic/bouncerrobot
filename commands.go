@@ -13,12 +13,14 @@ func delCommand(c telebot.Context) error {
 	if c.Message().IsReply() {
 		err := voteDel(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID, c.Sender().ID)
 		if err != nil {
-			bot.Send(c.Chat(), mAlreadyVotes)
+			bot.Send(c.Chat(), mAlreadyVoted)
 			return err
 		}
 
-		del := checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo)
-		if del {
+		del, err := checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo)
+		if err != nil {
+			bot.Send(c.Chat(), mNotAdmin)
+		} else if del {
 			bot.Send(c.Chat(), mDeleted)
 		}
 

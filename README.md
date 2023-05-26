@@ -3,7 +3,6 @@
 
 #### TODO - v1.0
 
-- [ ] handle when not admin
 - [ ] ban execute
 - [ ] deploy
 - [ ] deploy script
@@ -24,3 +23,4 @@
 - [x] del command basics
 - [x] delete vote
 - [x] delete execute
+- [x] handle when not admin

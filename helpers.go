@@ -26,14 +26,14 @@ func voteDel(messageID int, ownerID int64, voterID int64) error {
 	return m.voteDel(voterID)
 }
 
-func checkDelete(messageID int, msg *telebot.Message) bool {
+func checkDelete(messageID int, msg *telebot.Message) (bool, error) {
 	m := getMessage(messageID)
 	count := db.Model(m).Association("Votes").Count()
 	if count == conf.Votes {
-		bot.Delete(msg)
-		return true
+		err := bot.Delete(msg)
+		return true, err
 	}
-	return false
+	return false, nil
 }
 
 func checkBan(userID int64) {
