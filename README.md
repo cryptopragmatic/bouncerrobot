@@ -1,9 +1,6 @@
 # BouncerRobot
+
 ## Democratic Telegram Bot For Deleting And Banning
-
-#### TODO - v1.0
-
-
 
 #### TODO - v1.1
 
