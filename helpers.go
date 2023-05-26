@@ -20,15 +20,15 @@ func getCallerInfo() (info string) {
 	return fmt.Sprintf("%s:%d: ", fileName, lineNo)
 }
 
-func voteDel(messageID int) {
+func voteDel(messageID int, userID int64) {
 	m := getMessage(messageID)
-	log.Println(m)
-	m.voteDel()
+	u := getUser(userID)
+	m.voteDel(u.ID)
 }
 
 func checkDelete(messageID int, userID int64) {
-	log.Println(messageID)
-	log.Println(userID)
+	m := getMessage(messageID)
+	log.Println(m)
 }
 
 func checkBan(userID int64) {

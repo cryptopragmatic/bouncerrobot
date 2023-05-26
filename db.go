@@ -15,14 +15,14 @@ func initDb() *gorm.DB {
 
 	dbconf.Logger = logger.Default.LogMode(logger.Error)
 
-	db, err = gorm.Open(sqlite.Open("vdb.db"), &dbconf)
+	db, err = gorm.Open(sqlite.Open("bouncer.db"), &dbconf)
 
 	if err != nil {
 		log.Println(err)
 		logTelegram(err.Error())
 	}
 
-	if err := db.AutoMigrate(&Message{}, &User{}); err != nil {
+	if err := db.AutoMigrate(&Message{}, &Vote{}, &User{}); err != nil {
 		panic(err.Error())
 	}
 

@@ -10,7 +10,7 @@ func initCommands() {
 
 func delCommand(c telebot.Context) error {
 	if c.Message().IsReply() {
-		voteDel(c.Message().ReplyTo.ID)
+		voteDel(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID)
 
 		checkDelete(c.Message().ReplyTo.ID, c.Message().ReplyTo.Sender.ID)
 
