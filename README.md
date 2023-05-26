@@ -5,11 +5,11 @@
 
 - [ ] welcome message
 - [ ] deploy
-- [ ] deploy script
-- [ ] dev env
 
 #### TODO - v1.1
 
+- [ ] deploy script
+- [ ] dev env
 - [ ] expand for multiple groups
 - [ ] custom settings for groups
 - [ ] unban command
