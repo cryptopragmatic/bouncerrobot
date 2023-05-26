@@ -8,6 +8,7 @@
 #### TODO - v1.1
 
 - [ ] expand for multiple groups
+- [ ] custom settings for groups
 - [ ] unban command
 
 #### DONE
