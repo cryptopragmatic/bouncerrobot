@@ -3,6 +3,7 @@
 
 #### TODO - v1.0
 
+- [ ] welcome message
 - [ ] deploy
 - [ ] deploy script
 - [ ] dev env
