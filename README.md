@@ -2,7 +2,6 @@
 
 #### TODO - v1.0
 
-- [ ] init database
 - [ ] del command basics
 - [ ] models
 - [ ] delete vote
@@ -15,5 +14,6 @@
 
 #### DONE
 
-- [x] Init project
-- [x] Init bot
+- [x] init project
+- [x] init bot
+- [x] init database
